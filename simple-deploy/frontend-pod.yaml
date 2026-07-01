@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: frontend-app
-      image: nitin9038/easy-frontend:latest
+      image: nitinrathod07/hard-frontend:latest
       ports:
         - containerPort: 80
 ---
