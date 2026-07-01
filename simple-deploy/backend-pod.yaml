@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: backend-app
-      image: shivansh7310/easy-backend:latest
+      image: nitinrathod07/hard-backend:latest
       ports:
         - containerPort: 8080
 
