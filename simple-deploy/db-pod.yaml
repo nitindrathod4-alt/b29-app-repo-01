@@ -3,7 +3,7 @@ kind: Pod
 metadata:
     name: db-pod
     labels:
-        app: easy-crud-db
+        app: hard-crud-db
 spec:
     containers:
         - name: mysql-container
@@ -22,7 +22,7 @@ metadata:
     name: db-svc
 spec:
     selector:
-        app: easy-crud-db
+        app: hard-crud-db
     ports:
       -  port: 3306
          targetPort: 3306
