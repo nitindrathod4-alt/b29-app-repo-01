@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh '''
                 cd frontend
-                docker build -t nitin9038/hard-frontend:latest .
+                docker build -t nitinrathod07/hard-frontend:latest .
                 '''
             }
         }
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 sh '''
                 cd backend
-                docker build -t nitin9038/hard-backend:latest .
+                docker build -t nitinrathod07/hard-backend:latest .
                 '''
             }
         }
@@ -45,8 +45,8 @@ pipeline {
                     sh '''
                     echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
 
-                    docker push nitin9038/hard-frontend:latest
-                    docker push nitin9038/hard-backend:latest
+                    docker push nitinrathod07/hard-frontend:latest
+                    docker push nitinrathod07/hard-backend:latest
 
                     docker logout
                     '''
@@ -57,8 +57,8 @@ pipeline {
         stage('DOCKER-CLEAN') {
             steps {
                 sh '''
-                docker rmi -f nitin9038/hard-frontend:latest || true
-                docker rmi -f nitin9038/hard-backend:latest || true
+                docker rmi -f nitinrathod07/hard-frontend:latest || true
+                docker rmi -f nitinrathod07/hard-backend:latest || true
                 '''
             }
         }
