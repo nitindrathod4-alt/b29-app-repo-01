@@ -74,7 +74,7 @@ pipeline {
 
                 aws eks update-kubeconfig \
                     --region ap-south-1 \
-                    --name my-cluster
+                    --name my-cluster0
 
                 kubectl get nodes
 
@@ -86,3 +86,4 @@ pipeline {
         }
     }
 }
+
